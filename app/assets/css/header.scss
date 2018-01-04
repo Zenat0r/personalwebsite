@@ -1,0 +1,181 @@
+$font-color: whitesmoke;
+
+header#app-static{
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: 100vh;
+	width: 100%;
+
+	overflow: hidden;
+
+	z-index: 1;
+
+	a{
+		color: $color-white;
+	}
+	
+	.content{
+		position: relative;
+		height: 80%;
+		width: 100%;
+
+		background-color: $color-black;
+		color: $font-color;	
+
+		overflow: auto;
+
+		z-index: 1;
+		.top{
+			position: fixed;
+			top: 0;
+			padding: 15px 25px;
+			
+			cursor: pointer;
+
+			z-index: 99;
+
+			.logo{				
+				font-family: $pacifico;
+				h1{
+					margin: 0;
+				}
+			}
+			.social{
+				span{
+					display: inline-block;
+					width: 28px;
+
+					img{
+						border:1px solid transparent;
+					}
+
+					&:hover img, &:focus img{
+						border:1px solid $color-white;
+					}
+				}
+			}			
+		}
+		section{			
+			width: 95%;
+			margin:auto;
+			padding-top: 75px; 
+
+			z-index: 1;
+
+			font-family: $indi;
+
+			> div{
+				position: relative;
+				z-index: 1;
+			}
+
+			.social-link *{
+				margin: 25px 15px 25px 0px;
+			}
+
+			.img-profil-container{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+
+				left: 0;
+
+				@media screen and (min-width: 600px) {
+					padding-right: 5%;
+					left: auto;
+				}
+				@media screen and (max-height: 650px) {
+					display:none;
+				}
+
+				z-index: 0;
+				.img-profil{
+					width: 250px;
+					margin: auto;
+					@media screen and (min-width: 600px) {
+						width: 300px;
+					}				
+				}
+			}
+		}
+	}
+	.bottom-pointer{
+		position: absolute;
+		bottom: 20%;
+		left: 0;
+		right: 0;
+
+		margin: auto; 
+
+		width: 50px;
+		height: 50px;
+
+		border-radius: 50%;
+		border: $color-white 2px solid;
+		background-color: $color-black;
+
+		transition: all .5s;
+
+		cursor: pointer;
+
+		z-index: 10;
+
+		span{
+			position: absolute;
+			right: 0;
+			left: 0;
+
+			opacity: 0;
+			color: $color-black;
+
+			transition: opacity .5s .5s;
+		}
+		&:hover, &:focus{
+			width: 100px;
+			border-radius: 5px;
+
+			background-color: $color-white;
+			color: $color-black;
+
+			&:after{
+				margin-top:10px;
+			}
+		}
+		&:hover span, &:focus span{
+			opacity: 1;
+		}			
+
+		&:after{
+			display:block;
+			content: "";
+			margin: auto;
+
+			height: 15px;
+			width: 15px;
+
+			border-left: 2px transparent solid;
+			border-right: 2px $color-white solid;
+			border-top: 2px transparent solid;
+			border-bottom: 2px $color-white solid;
+
+			transform: rotate(45deg);
+			transform-origin: 50% 50%;
+		}
+	}	
+	.slide{
+		background-color: $color-black;
+		position: absolute;
+
+		bottom: 0;
+
+		height: 450px;
+		width: 200%;
+
+		transform-origin: 0% 100%;
+		transform: rotate(-5.7deg);
+
+		z-index: 0;
+	}
+}

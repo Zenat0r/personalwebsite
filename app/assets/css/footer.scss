@@ -1,0 +1,146 @@
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	max-height: 70vh;
+	
+	transform: translateY(100%);
+	transition: transform 1.5s;	
+
+	background-color: $color-black;
+	color: $color-white;
+
+	z-index: 3;
+	.slide{
+		background-color: $color-black;
+		position: absolute;
+
+		top: 0;
+
+		height: 195px;
+		width: 200%;
+
+		transform-origin: 0 0;
+		transform: rotate(-5.7deg) translateY(100%);
+
+		transition: transform 1.5s linear;
+
+		z-index: 0;
+	}
+	#show-footer{
+		position: absolute;
+		right: 15px;
+
+		top: -60px;
+		@media screen and (min-width: 600px) {
+			top: -5vw;
+		}
+
+		width: 50px;
+		height: 50px;
+
+		border-radius: 50%;
+		border: $color-white 2px solid;
+		background-color: $color-black;
+
+		color: $color-white;
+		cursor: pointer;
+
+		img{
+			margin-top: 4px;
+		}		
+	}
+	section{
+		position: relative;
+		z-index: 2;
+
+		input, textarea{
+			width: 100%;
+
+			padding: 15px 25px;
+			background-color: $color-white;
+
+			color: $color-black;
+
+			border: none;
+			border-radius: 5px; 
+
+			resize: none;
+		}
+		button{
+			padding: 15px 25px;
+
+			background-color: $color-black;
+
+			border-radius: 5px;
+			border: 2px solid $color-white;
+			color: $color-white;
+
+			cursor: pointer;
+
+			transition: all .5s;
+
+			&:hover{
+				background-color: $color-white;
+				color: $color-black;
+			}
+		}
+		img{
+			border: 4px solid transparent;
+
+			&:hover{
+				border: 4px solid $color-white;
+			}
+		}
+		.contact-social{
+			margin-top: 75px;
+		}
+	}
+}
+footer.actif{
+	transform: translateY(0);
+
+	#show-footer{		
+
+		&:before{
+			position: absolute;
+			top: 0; right: 0;
+			display:block;
+			content: "";
+
+			width: 4px;
+			height: 50%;
+
+			background-color: $color-white;
+
+			transform-origin: 100% 0;
+			transform: rotate(45deg);
+
+			margin: 17px 13px 0 0;
+		}
+
+		&:after{
+			position: absolute;
+			top: 0; left: 0;
+			display:block;
+			content: "";
+
+			width: 4px;
+			height: 50%;
+
+			background-color: $color-white;
+
+			transform-origin: 0 0;
+			transform: rotate(-45deg);
+
+			margin: 17px 0 0 13px;
+		}
+
+		> img{
+			opacity: 0;
+			transition: opacity 1.5s;
+		}
+	}
+}

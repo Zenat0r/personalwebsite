@@ -1,0 +1,70 @@
+.view-index{	
+	width: 95%;
+	margin: auto;
+	h1{
+		text-align: center;
+		padding: 15px 35px;
+
+		background: $color-white;
+
+		border: 2px solid $color-black; 
+
+		display: table;
+		margin: auto;
+	}
+	.vignette-container{
+		padding: 15px 25px;
+
+		pointer-events: none;
+
+		.vignette{
+			position: relative;
+
+			overflow: hidden;
+
+			pointer-events: none;
+
+			border: 5px solid $color-black;
+
+			max-height: 300px;			
+
+			img{				
+				pointer-events: auto;
+			}
+
+			&:hover, &:focus{
+				box-shadow:0px 0px 2px black;
+			}
+			&:hover .title-container, &:focus .title-container{
+				opacity: 1;
+			}
+			&:hover img, &:focus img{
+				transition: transform 0.2s;
+				transform: scale(1.1);
+			}
+			.title-container{
+				position: absolute;
+				left: 0; right: 0;
+				top: 0; bottom: 0;
+
+				background-color: rgba(0,0,0,0.3);
+
+				opacity: 0;
+
+				transition: opacity 0.2s;
+
+				.title{
+					margin: auto;
+
+					font-family: $pacifico;
+					font-size: 50px;
+					@media screen and (min-width: 600px) {
+						font-size: 75px;
+					}
+					color: $color-white;
+					text-shadow: 0px 0px 2px $color-black;
+				}
+			}
+		}
+	}	
+}

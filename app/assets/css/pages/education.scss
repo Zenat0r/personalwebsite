@@ -1,0 +1,33 @@
+.view-education{
+
+	.title{
+		background-color: $color-black;
+
+		min-height: 150px;
+
+		padding-top: 15px;
+		padding-bottom: 15px;
+		.main-title{
+			font-size: 45px;
+			text-transform: uppercase;
+			text-overflow: ellipsis;
+
+			color: $color-white;
+
+			text-align: center;			
+		}
+	}
+	h3{
+		font-size: 2rem;
+	}
+	p{
+		font-size: 1.5rem;
+		line-height: 1.6;
+	}	
+	a {
+		font-style: italic;
+		font-weight: bold;
+		color: $color-black;
+		text-decoration: underline;
+	}
+}

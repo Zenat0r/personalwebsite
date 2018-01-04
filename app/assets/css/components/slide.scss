@@ -1,0 +1,39 @@
+.component-container.slide{
+	position: relative;
+
+	height: 600px;
+	widows: 100%;
+
+	overflow: hidden;
+
+	.slide-up{
+		position: absolute;
+		top: 0; left: 0;
+		width: 120%;
+		height: 190px;
+
+		transform-origin: 0 100%;
+		transform: rotate(-5.7deg);
+
+		background-color: $color-white;
+
+		z-index: 2;
+	}
+	.slide-img{
+		height: inherit;
+
+		background-size: cover;
+		background-position: center;
+	}
+	.slide-down{
+		position: absolute;
+		bottom: 0; right: 0;
+		width: 120%;
+		height: 190px;
+
+		transform-origin: 100% 0;
+		transform: rotate(-5.7deg);
+
+		background-color: $color-white;
+	}
+}

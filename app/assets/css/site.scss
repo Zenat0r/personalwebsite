@@ -1,0 +1,93 @@
+/**
+	Général définition
+**/
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+/**
+	Color variable
+**/
+$color-black: #111111;
+$color-white: whitesmoke;
+
+$pacifico: "Pacifico",cursive;
+$indi: 'Indie Flower', cursive;
+
+
+/**css for the app**/
+section#app-dynamic{
+	position: relative;
+	padding: 150px 0 150px 0;
+	z-index: 0;
+}
+
+body{
+	background-color: $color-white;
+
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+
+	overflow: auto;
+
+	&:not(.loaded){
+		overflow: hidden;
+	}
+}
+
+main{
+	background-image: url(https://preview.christophe-sieradzki.fr/public/img/important.png);
+	background-repeat: round;
+}
+
+.view-back-button{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+
+	font-size: 30px;
+	color: $color-white;
+	line-height: 50px;
+	text-align: center;
+
+	height: 60px;
+	width: 60px;
+
+	background-color: $color-black;
+	border: 5px solid $color-white;
+	border-radius: 50%;
+
+	transition: all .5s;
+
+	cursor: pointer;
+
+	&:hover{
+		color: $color-black;
+		background-color: $color-white;
+		border: 5px solid $color-black;
+	}
+}
+
+@import './loader.scss';
+@import './grid.scss';
+@import './header.scss';
+@import './footer.scss';
+
+/*components(pages)*/
+@import './pages/index.scss';
+@import './pages/associatif.scss';
+@import './pages/education.scss';
+@import './pages/portfolio.scss';
+@import './pages/projetPro.scss';
+@import './pages/404.scss';
+
+/*components*/
+@import './components/frame.scss';
+@import './components/loader.scss';
+@import './components/slide.scss';

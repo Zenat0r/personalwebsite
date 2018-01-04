@@ -1,0 +1,71 @@
+.component-container.frame{
+	width: 100%;
+
+	overflow: hidden;
+
+	position: relative;
+
+	border: 2px solid $color-black;
+
+	h3{
+		position: relative;
+
+		padding-left: 10px;
+
+		color: $color-white;
+		font-family: $pacifico;
+
+		line-height: 30px;
+	}
+	.slide-up{
+		position: absolute;
+		top: 0; left: 0;
+		width: 120%;
+		height: 60px;
+
+		transform-origin: 0 100%;
+		transform: rotate(-5.7deg);
+
+		background-color: $color-black;
+	}
+	p{		
+		padding-top: 15px;		
+
+		font-family: $indi;
+		font-weight: bold;
+	}
+	a {
+		font-style: italic;
+		font-weight: bold;
+		color: $color-black;
+		text-decoration: underline;
+	}
+
+	@media only screen and (min-width: 600px){
+		h3{
+			position: relative;
+
+			padding-left: 50px;
+
+			color: $color-white;
+			font-family: $pacifico;
+			font-size: 50px;
+
+			line-height: 50px;
+		}
+		.slide-up{
+			position: absolute;
+			top: 0; left: 0;
+			width: 120%;
+			height: 150px;
+
+			transform-origin: 0 100%;
+			transform: rotate(-5.7deg);
+
+			background-color: $color-black;
+		}
+		p{
+			padding-top: 3px;
+		}		
+	}	
+}

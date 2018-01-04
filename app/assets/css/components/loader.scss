@@ -1,0 +1,48 @@
+#app-dynamic{
+	.loader-view{
+		position: fixed;
+		top: calc(50% - 25px);
+		/*left: calc(50% - 25px);*/
+		left: 0; right: 0;
+		text-align: center;
+
+		/*height: 50px;
+		width: 50px;
+
+		background-color: transparent;
+
+		border-top: 5px solid $color-black;
+		border-right: 5px solid $color-white;
+		border-bottom: 5px solid $color-black;
+		border-left: 5px solid $color-white;
+		border-radius: 50%;*/
+
+		font-family: $pacifico;
+		font-size: 50px;
+
+		z-index: 999999999;
+
+		animation-name: spike;
+		animation-duration: 1.25s;
+		animation-iteration-count: infinite;
+
+		transform-origin: 50% 50%;
+	}
+}
+@keyframes loop {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes spike {
+    0% {opacity: 1}
+    10% {opacity: 0.9}
+    20% {opacity: 0.8}
+    30% {opacity: 0.7}
+    40% {opacity: 0.6}
+    50% {opacity: 0.5}
+    60% {opacity: 0.4}
+    70% {opacity: 0.3}
+    80% {opacity: 0.2}
+    90% {opacity: 0.1}
+    100% {opacity: 1}
+}
